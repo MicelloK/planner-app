@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.micellok.gui.MeetingsController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefWidth="400.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="Wybierz kalendarz:" />
+                  <ChoiceBox fx:id="calendarChoiceBox" focusTraversable="false" prefWidth="150.0" />
+                  <Button fx:id="editUserBtn" focusTraversable="false" mnemonicParsing="false" text="Edytuj" />
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="newMeetingBtn" focusTraversable="false" mnemonicParsing="false" text="Utwórz spotkanie" />
+            <VBox alignment="CENTER" maxWidth="-Infinity" prefHeight="250.0" prefWidth="350.0">
+               <children>
+                  <Label fx:id="meetingNameLabel" alignment="CENTER" prefHeight="28.0" prefWidth="356.0" text="Nazwa spotkania">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="meetingInfoLabel" alignment="TOP_LEFT" prefHeight="200.0" prefWidth="350.0" text="Tutaj pojawi się opis spotkania." wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Button fx:id="newUserBtn" focusTraversable="false" mnemonicParsing="false" prefWidth="120.0" text="Dodaj Użytkownika" />
+                  <Button fx:id="deleteUserBtn" focusTraversable="false" mnemonicParsing="false" prefWidth="120.0" text="Usuń Użytkownika" />
+               </children>
+            </HBox>
+            <Button fx:id="findMeetingDateBtn" focusTraversable="false" mnemonicParsing="false" text="Znajdź termin" />
+         </children>
+         <HBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefWidth="400.0" spacing="20.0">
+         <children>
+            <Label text="Spotkania" />
+            <DatePicker fx:id="meetingDatePicker" focusTraversable="false" />
+            <ListView fx:id="meetingListView" focusTraversable="false" maxWidth="-Infinity" prefHeight="320.0" prefWidth="350.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </ListView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="editMeetingBtn" alignment="CENTER" focusTraversable="false" mnemonicParsing="false" prefWidth="115.0" text="Edytuj spotkanie" />
+                  <Button fx:id="deleteMeetingBtn" focusTraversable="false" mnemonicParsing="false" prefWidth="115.0" text="Usuń spotkanie" />
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </HBox.margin>
+      </VBox>
+   </children>
+</HBox>
